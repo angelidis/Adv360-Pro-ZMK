@@ -102,7 +102,7 @@
         win_mgmt {
             bindings = <
 &trans            &win_prog1  &win_prog2  &win_prog3  &win_prog4  &win_prog5       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans      &kp UP      &trans      &trans      &kp PRINTSCREEN  &tog 0                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans      &kp UP      &trans      &trans      &kp PRINTSCREEN  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT    &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &trans           &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_CONTROL  &trans      &trans      &trans      &trans      &trans                           &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans            &kp TAB     &trans      &trans      &trans                       &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans

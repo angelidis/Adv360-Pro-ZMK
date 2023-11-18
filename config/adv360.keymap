@@ -20,20 +20,6 @@
     };
 
     macros {
-        win_prog1: win_prog1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp NUMBER_1>;
-            label = "WIN_PROG1";
-        };
-
-        win_prog2: win_prog2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp NUMBER_2>;
-            label = "WIN_PROG2";
-        };
-
         win_prog3: win_prog3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -51,7 +37,10 @@
         win_prog5: win_prog5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp N5>;
+            bindings =
+                <&kp LEFT_WIN &kp N5 &kp T &kp E &kp S &kp T>,
+                <&macro_press>;
+
             label = "WIN_PROG5";
         };
     };
@@ -101,11 +90,11 @@
 
         win_mgmt {
             bindings = <
-&trans            &win_prog1  &win_prog2  &win_prog3  &win_prog4  &win_prog5       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &trans      &kp UP      &trans      &trans      &kp PRINTSCREEN  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT    &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &trans           &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_CONTROL  &trans      &trans      &trans      &trans      &trans                           &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans            &kp TAB     &trans      &trans      &trans                       &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans            &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &trans            &kp UP            &trans            &kp PAGE_UP       &kp PRINTSCREEN  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT    &kp LEFT          &kp DOWN          &kp RIGHT         &kp PAGE_DOWN     &kp BACKSPACE    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)         &kp LC(A)                        &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &kp TAB           &kp F2            &trans            &trans                             &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

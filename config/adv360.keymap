@@ -90,7 +90,7 @@
 
         win_mgmt {
             bindings = <
-&trans            &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans            &trans            &kp UP            &trans            &kp PAGE_UP       &kp PRINTSCREEN  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT    &kp LEFT          &kp DOWN          &kp RIGHT         &kp PAGE_DOWN     &kp BACKSPACE    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_CONTROL  &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)         &kp LC(A)                        &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans

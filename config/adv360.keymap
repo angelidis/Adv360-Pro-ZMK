@@ -73,7 +73,7 @@
 &kp F1  &kp F2           &kp F3         &kp F4            &kp F5                &kp F6      &tog 1                                      &mo 3   &kp F7         &kp F8                &kp F9                 &kp F10    &kp F11  &kp F12
 &trans  &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES     &kp PERIOD  &none                                       &none   &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &none    &trans
 &trans  &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL             &kp HASH    &none   &trans  &trans      &trans  &trans  &none   &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none      &none    &trans
-&trans  &kp LCTRL        &kp SLASH      &kp ASTERISK      &kp NON_US_BACKSLASH  &kp DOLLAR                  &trans      &trans                  &kp TILDE      &kp LEFT_BRACE        &kp RIGHT_BRACE        &none      &none    &trans
+&trans  &kp LCTRL        &kp SLASH      &kp ASTERISK      &kp NON_US_BACKSLASH  &kp DOLLAR                  &trans      &trans                  &kp TILDE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none      &none    &trans
 &trans  &trans           &caps_word     &trans            &trans                            &trans  &trans  &trans      &trans  &trans  &trans                 &trans                &trans                 &trans     &trans   &trans
             >;
         };

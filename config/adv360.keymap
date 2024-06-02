@@ -72,7 +72,7 @@
             bindings = <
 &kp F1  &kp F2           &kp F3         &kp F4            &kp F5                &kp F6      &tog 1                                      &mo 3   &kp F7         &kp F8                &kp F9                 &kp F10    &kp F11  &kp F12
 &trans  &kp SQT          &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES     &kp PERIOD  &none                                       &none   &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &none    &trans
-&trans  &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL             &kp HASH    &none   &trans  &trans      &trans  &trans  &none   &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none      &none    &trans
+&trans  &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL             &kp HASH    &trans  &trans  &trans      &trans  &trans  &none   &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none      &none    &trans
 &trans  &kp LCTRL        &kp SLASH      &kp ASTERISK      &kp NON_US_BACKSLASH  &kp DOLLAR                  &trans      &trans                  &kp TILDE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none      &none    &trans
 &trans  &trans           &caps_word     &trans            &trans                            &trans  &trans  &trans      &trans  &trans  &trans                 &trans                &trans                 &trans     &trans   &trans
             >;
@@ -91,7 +91,7 @@
         win_mgmt {
             bindings = <
 &kp ESCAPE  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)  &trans                                      &trans  &kp LG(NUMBER_6)  &kp LG(N7)  &kp LG(NUMBER_8)  &kp LG(N9)  &kp LG(N0)     &kp PRINTSCREEN
-&trans      &trans            &kp LC(W)         &kp LC(W)         &none             &kp LC(T)   &trans                                      &trans  &kp INSERT        &kp HOME    &kp UP_ARROW      &kp END     &kp PAGE_UP    &kp SCROLLLOCK
+&trans      &trans            &kp LC(W)         &kp LC(E)         &none             &kp LC(T)   &trans                                      &trans  &kp INSERT        &kp HOME    &kp UP_ARROW      &kp END     &kp PAGE_UP    &kp SCROLLLOCK
 &trans      &kp LC(A)         &kp LC(S)         &none             &kp LC(F)         &none       &trans  &trans  &trans      &trans  &trans  &trans  &kp RIGHT_SHIFT   &kp LEFT    &kp DOWN          &kp RIGHT   &kp PAGE_DOWN  &kp C_VOLUME_UP
 &trans      &kp LC(Z)         &kp LC(X)         &kp LC(C)         &kp LC(V)         &none                       &trans      &trans                  &kp LC(N)         &none       &none             &trans      &trans         &kp C_VOLUME_DOWN
 &trans      &kp LCTRL         &kp LEFT_ALT      &trans            &trans                        &trans  &trans  &trans      &trans  &trans  &trans                    &trans      &trans            &trans      &kp C_PLAY     &kp C_STOP

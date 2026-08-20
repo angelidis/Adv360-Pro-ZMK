@@ -1,0 +1,165 @@
+// Macropad mod-morph behaviors.
+// Left Shift is the Magic modifier.
+// First binding = straight action, second binding = Magic action.
+
+// `mm_` is just a naming prefix I chose for the custom behaviors
+// mm_del = mod-morph behavior for the Backspace-position key
+
+
+/ {
+    behaviors {
+        mm_q: mm_q {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: F13
+            // Magic:    F14
+            bindings = <&kp F13>, <&kp F14>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_w: mm_w {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Close tab
+            // Magic:    Close application
+            bindings = <&kp LC(W)>, <&kp LA(F4)>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_e: mm_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: New window
+            // Magic:    New private/incognito window
+            bindings = <&kp LC(N)>, <&kp LC(LS(N))>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_t: mm_t {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: New tab
+            // Magic:    Reopen closed tab
+            bindings = <&kp LC(T)>, <&kp LC(LS(T))>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_a: mm_a {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Select all
+            // Magic:    Ctrl+Shift+A
+            bindings = <&kp LC(A)>, <&kp LC(LS(A))>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_s: mm_s {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: F21
+            // Magic:    F22
+            bindings = <&kp F21>, <&kp F22>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_d: mm_d {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Show desktop
+            // Magic:    Minimize all except active window
+            bindings = <&kp LG(D)>, <&kp LG(HOME)>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_f: mm_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Find
+            // Magic:    Open/switch to taskbar app 1
+            bindings = <&kp LC(F)>, <&kp LG(N1)>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_z: mm_z {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Undo
+            // Magic:    Redo
+            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_left: mm_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Previous tab
+            // Magic:    Shift+Tab
+            bindings = <&kp LC(PG_UP)>, <&kp LS(TAB)>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_right: mm_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Next tab
+            // Magic:    Tab
+            bindings = <&kp LC(PG_DN)>, <&kp TAB>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_del: mm_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Delete
+            // Magic:    Backspace
+            bindings = <&kp DEL>, <&kp BSPC>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_home: mm_home {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: Home
+            // Magic:    Ctrl+Home
+            bindings = <&kp HOME>, <&kp LC(HOME)>;
+
+            mods = <MOD_LSFT>;
+        };
+
+        mm_end: mm_end {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            // Straight: End
+            // Magic:    Ctrl+End
+            bindings = <&kp END>, <&kp LC(END)>;
+
+            mods = <MOD_LSFT>;
+        };
+    };
+};

@@ -147,11 +147,11 @@
     half {
       display-name = "HALF";
       bindings = <
-        &kp F1          &none      &none            &none      &none      &none      &none                                                                               &none     &none          &none          &none          &none          &none          &none
-        &kp LC(LS(V))   &mm_q      &mm_w            &mm_e      &kp F2     &mm_t      &tog HALF                                                                           &none     &none          &none          &none          &none          &none          &none
-        &kp ESC         &mm_a      &mm_s            &mm_d      &mm_f      &kp LC(L)  &none                    &kp HOME    &kp END     &kp LGUI    &kp RCTRL              &none     &none          &none          &none          &none          &none          &none
-        &none           &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LCTRL   &kp PG_UP                                    &none          &none          &none          &none          &none          &none
-        &none           &kp GRAVE  &kp LA(LSHFT)    &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp LSHIFT  &kp PG_DN   &kp ENTER   &kp KP_N0                           &none          &none          &none          &none          &none
+        &kp F1          &none      &none            &none      &none      &none      &none                                                                                &none     &none          &none          &none          &none          &none          &none
+        &kp LC(LS(V))   &mm_q      &mm_w            &mm_e      &kp F2     &mm_t      &tog HALF                                                                            &none     &none          &none          &none          &none          &none          &none
+        &kp ESC         &mm_a      &mm_s            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI    &kp RCTRL              &none     &none          &none          &none          &none          &none          &none
+        &none           &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                                    &none          &none          &none          &none          &none          &none
+        &none           &kp GRAVE  &kp LA(LSHFT)    &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp LALT     &kp PG_DN   &kp ENTER   &kp KP_N0                           &none          &none          &none          &none          &none
       >;
     };
 

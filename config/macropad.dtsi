@@ -16,7 +16,7 @@
             // Magic:    F14
             bindings = <&kp F13>, <&kp F14>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_w: mm_w {
@@ -27,7 +27,7 @@
             // Magic:    Close application
             bindings = <&kp LC(W)>, <&kp LA(F4)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_e: mm_e {
@@ -38,7 +38,7 @@
             // Magic:    New private/incognito window
             bindings = <&kp LC(N)>, <&kp LC(LS(N))>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_t: mm_t {
@@ -49,7 +49,7 @@
             // Magic:    Reopen closed tab
             bindings = <&kp LC(T)>, <&kp LC(LS(T))>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_a: mm_a {
@@ -60,7 +60,7 @@
             // Magic:    Ctrl+Shift+A
             bindings = <&kp LC(A)>, <&kp LC(LS(A))>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_s: mm_s {
@@ -71,7 +71,7 @@
             // Magic:    F22
             bindings = <&kp F21>, <&kp F22>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_d: mm_d {
@@ -82,7 +82,7 @@
             // Magic:    Minimize all except active window
             bindings = <&kp LG(D)>, <&kp LG(HOME)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_f: mm_f {
@@ -93,7 +93,7 @@
             // Magic:    Open/switch to taskbar app 1
             bindings = <&kp LC(F)>, <&kp LG(N1)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_z: mm_z {
@@ -104,29 +104,31 @@
             // Magic:    Redo
             bindings = <&kp LC(Z)>, <&kp LC(Y)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_left: mm_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
 
-            // Straight: Previous tab
-            // Magic:    Shift+Tab
+            // Straight: Previous browser/app tab
+            // Alt:      Alt+Shift+Tab
             bindings = <&kp LC(PG_UP)>, <&kp LS(TAB)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
         };
 
         mm_right: mm_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
 
-            // Straight: Next tab
-            // Magic:    Tab
+            // Straight: Next browser/app tab
+            // Alt:      Alt+Tab
             bindings = <&kp LC(PG_DN)>, <&kp TAB>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
+            keep-mods = <MOD_LALT>;
         };
 
         mm_del: mm_del {
@@ -137,7 +139,7 @@
             // Magic:    Backspace
             bindings = <&kp DEL>, <&kp BSPC>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_home: mm_home {
@@ -148,7 +150,7 @@
             // Magic:    Ctrl+Home
             bindings = <&kp HOME>, <&kp LC(HOME)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
 
         mm_end: mm_end {
@@ -159,7 +161,7 @@
             // Magic:    Ctrl+End
             bindings = <&kp END>, <&kp LC(END)>;
 
-            mods = <MOD_LSFT>;
+            mods = <MOD_LALT>;
         };
     };
 };

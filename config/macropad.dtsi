@@ -16,7 +16,7 @@
             // Magic:    F14
             bindings = <&kp F13>, <&kp F14>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_w: mm_w {
@@ -27,7 +27,7 @@
             // Magic:    Close application
             bindings = <&kp LC(W)>, <&kp LA(F4)>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_e: mm_e {
@@ -38,7 +38,7 @@
             // Magic:    New private/incognito window
             bindings = <&kp LC(N)>, <&kp LC(LS(N))>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_t: mm_t {
@@ -49,7 +49,7 @@
             // Magic:    Reopen closed tab
             bindings = <&kp LC(T)>, <&kp LC(LS(T))>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_a: mm_a {
@@ -60,7 +60,7 @@
             // Magic:    Ctrl+Shift+A
             bindings = <&kp LC(A)>, <&kp LC(LS(A))>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_s: mm_s {
@@ -71,7 +71,7 @@
             // Magic:    F22
             bindings = <&kp F21>, <&kp F22>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_d: mm_d {
@@ -82,7 +82,7 @@
             // Magic:    Minimize all except active window
             bindings = <&kp LG(D)>, <&kp LG(HOME)>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_f: mm_f {
@@ -93,7 +93,7 @@
             // Magic:    Open/switch to taskbar app 1
             bindings = <&kp LC(F)>, <&kp LG(N1)>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_z: mm_z {
@@ -104,7 +104,7 @@
             // Magic:    Redo
             bindings = <&kp LC(Z)>, <&kp LC(Y)>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_left: mm_left {
@@ -115,8 +115,8 @@
             // Alt:      Alt+Shift+Tab
             bindings = <&kp LC(PG_UP)>, <&kp LS(TAB)>;
 
-            mods = <MOD_LALT>;
-            keep-mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
+            keep-mods = <MOD_RALT>;
         };
 
         mm_right: mm_right {
@@ -127,8 +127,8 @@
             // Alt:      Alt+Tab
             bindings = <&kp LC(PG_DN)>, <&kp TAB>;
 
-            mods = <MOD_LALT>;
-            keep-mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
+            keep-mods = <MOD_RALT>;
         };
 
         mm_del: mm_del {
@@ -139,9 +139,10 @@
             // Magic:    Backspace
             bindings = <&kp DEL>, <&kp BSPC>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
+        // this doesnt work i dont know why
         mm_home: mm_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -150,7 +151,7 @@
             // Magic:    Ctrl+Home
             bindings = <&kp HOME>, <&kp LC(HOME)>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
 
         mm_end: mm_end {
@@ -161,7 +162,7 @@
             // Magic:    Ctrl+End
             bindings = <&kp END>, <&kp LC(END)>;
 
-            mods = <MOD_LALT>;
+            mods = <MOD_RALT>;
         };
     };
 };

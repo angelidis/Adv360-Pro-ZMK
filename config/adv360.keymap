@@ -8,6 +8,11 @@
 
 #include "macropad.dtsi"
 
+#ifndef KEYMAP_DRAWER
+#include "win_mgmt.h"
+#define SOUND_PANEL LC(LG(V))
+#endif
+
 #define BASE 0
 #define KP   1
 #define FN   2
@@ -15,6 +20,7 @@
 #define HALF 4
 #define NAV  5
 #define SYM  6
+#define WIN  7
 
 
 #define LEFT_HAND_KEYS     0 1 2 3 4 5 6 \
@@ -102,35 +108,36 @@
     default_layer {
       display-name = "Base";
       bindings = <
-        &kp EQUAL &kp N1        &kp N2          &kp N3          &kp N4          &kp N5 &tog KP                                                                                       &mo MOD  &kp N6       &kp N7        &kp N8          &kp N9          &kp N0          &kp MINUS
-        &kp TAB   &kp Q         &kp W           &kp E           &kp R           &kp T  &tog HALF                                                                                     &none    &kp Y        &kp U         &kp I           &kp O           &kp P           &kp BSLH
-        &kp ESC   &hml LGUI A   &hml LALT S     &hml LSHFT D    &hml LCTRL F    &kp G  &none                     &kp LCTRL         &kp LALT     &kp LGUI  &kp RCTRL                  &none    &kp H        &hmr RCTRL J  &hmr RSHFT K    &hmr RALT L     &hmr RGUI SEMI  &kp SQT
-        &kp LSHFT &kp Z         &kp X           &kp C           &kp V           &kp B                                              &kp HOME     &kp PG_UP                                     &kp N        &kp M         &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT
-        &none     &kp GRAVE     &kp CAPS        &kp LEFT        &kp RIGHT                          &lt NAV SPACE &lt KP DEL        &kp END      &kp PG_DN &lt FN ENTER &lt SYM BSPC                        &kp DOWN      &kp UP          &kp LBKT        &kp RBKT        &kp PRINTSCREEN
+        &kp EQUAL &kp N1          &kp N2          &kp N3          &kp N4          &kp N5 &tog KP                                                                                       &mo MOD  &kp N6       &kp N7        &kp N8          &kp N9          &kp N0          &kp MINUS
+        &kp TAB   &kp Q           &kp W           &kp E           &kp R           &kp T  &tog HALF                                                                                     &none    &kp Y        &kp U         &kp I           &kp O           &kp P           &kp BSLH
+        &kp ESC   &hml LGUI A     &hml LALT S     &hml LSHFT D    &hml LCTRL F    &kp G  &none                     &kp LCTRL         &kp LALT     &kp LGUI  &kp RCTRL                  &none    &kp H        &hmr RCTRL J  &hmr RSHFT K    &hmr RALT L     &hmr RGUI SEMI  &kp SQT
+        &kp LSHFT &kp Z           &kp X           &kp C           &kp V           &kp B                                              &kp HOME     &kp PG_UP                                     &kp N        &kp M         &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT
+        &none     &lt WIN GRAVE   &kp CAPS        &kp LEFT        &kp RIGHT                          &lt NAV SPACE &lt KP DEL        &kp END      &kp PG_DN &lt FN ENTER &lt SYM BSPC                        &kp DOWN      &kp UP          &kp LBKT        &kp RBKT        &kp PRINTSCREEN
       >;
     };
 
     keypad {
       display-name = "Kp";
       bindings = <
-        &kp EQUAL &none     &none   &none          &none           &none  &trans                                                         &mo MOD  &none      &kp KP_NUM   &kp KP_EQUAL     &kp KP_DIVIDE &kp KP_MULTIPLY &none
-        &kp TAB   &none     &none   &none          &none           &none  &none                                                          &none    &none      &kp KP_N7    &kp KP_N8        &kp KP_N9     &kp KP_MINUS    &none
-        &kp ESC   &none     &none   &none          &none           &none  &none           &none   &none   &kp DEL &kp BSPC               &none    &kp MINUS  &kp KP_N4    &kp KP_N5        &kp KP_N6     &kp KP_PLUS     &none
-        &kp LSHFT &none     &none   &kp LS(SPACE)  &kp LC(SPACE)   &none                          &none   &none                                   &none      &kp KP_N1    &kp KP_N2        &kp KP_N3     &kp KP_ENTER    &none
-        &trans    &none     &none   &kp LC(PG_UP)  &kp LC(PG_DN)                 &kp BSPC &trans  &none   &none   &kp ENTER &kp KP_N0                        &macro_000   &kp COMMA        &kp KP_DOT    &none           &trans
+        &kp EQUAL &none     &none     &none          &none           &none  &trans                                                         &none    &none      &kp KP_NUM   &kp KP_EQUAL     &kp KP_DIVIDE &kp KP_MULTIPLY &none
+        &kp TAB   &none     &none     &none          &none           &none  &none                                                          &none    &none      &kp KP_N7    &kp KP_N8        &kp KP_N9     &kp KP_MINUS    &none
+        &kp ESC   &kp LGUI  &kp LALT  &kp LSHFT      &kp LCTRL       &none  &none           &none   &none   &kp DEL &kp BSPC               &none    &kp MINUS  &kp KP_N4    &kp KP_N5        &kp KP_N6     &kp KP_PLUS     &none
+        &kp LSHFT &none     &none     &kp LS(SPACE)  &kp LC(SPACE)   &none                          &none   &none                                   &none      &kp KP_N1    &kp KP_N2        &kp KP_N3     &kp KP_ENTER    &none
+        &none     &none     &none     &kp LC(PG_UP)  &kp LC(PG_DN)                    &none &trans  &none   &none   &kp ENTER &kp KP_N0                        &macro_000   &kp COMMA        &kp KP_DOT    &none           &kp PRINTSCREEN
       >;
     };
 
     fn {
       display-name = "Fn";
       bindings = <
-        &trans &trans   &trans   &trans    &trans    &trans     &tog 1                                             &mo MOD       &trans    &trans   &trans    &trans    &trans    &trans
-        &trans &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT  &none                                              &none         &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR  &trans
-        &trans &kp F1   &kp F2   &kp F3    &kp F4    &kp F5     &none        &trans &trans    &trans &trans        &none         &kp F6    &kp F7   &kp F8    &kp F9    &kp F10   &trans
-        &trans &kp F11  &kp F12  &kp F13   &kp F14   &kp F15                        &trans    &trans                             &kp F16   &kp F17  &kp F18   &kp F19   &kp F20   &trans
-        &trans &trans   &trans   &trans    &trans                     &trans &trans &trans    &trans &trans &trans                         &trans   &trans    &trans    &trans    &trans
+        &none  &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT &trans                                                                              &none     &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR &none
+        &none  &kp F24  &kp F19  &kp F20   &kp F21   &none     &trans                                                                              &none     &kp F12   &kp F7   &kp F8    &kp F9    &none    &none
+        &none  &kp F23  &kp F16  &kp F17   &kp F18   &none     &none                            &trans &trans    &trans &trans                     &none     &kp F11   &kp F4   &kp F5    &kp F6    &none    &none
+        &none  &kp F22  &kp F13  &kp F14   &kp F15   &none                                             &trans    &trans                                      &kp F10   &kp F1   &kp F2    &kp F3    &none    &none
+        &none  &none    &none    &none     &none                                         &trans &trans &trans    &trans &trans &trans                                  &none    &none     &none     &none    &none
       >;
     };
+
 
 
     mod {
@@ -147,48 +154,57 @@
     half {
       display-name = "HALF";
       bindings = <
-        &kp F1          &none      &none            &none      &none      &none      &none                                                                                &none     &none          &none          &none          &none          &none          &none
-        &kp LC(LG(V))   &mm_q      &mm_w            &mm_e      &kp F2     &mm_t      &tog HALF                                                                            &none     &none          &none          &none          &none          &none          &none
-        &kp ESC         &mm_a      &mm_s            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI    &kp RCTRL              &none     &none          &none          &none          &none          &none          &none
-        &none           &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                                    &none          &none          &none          &none          &none          &none
-        &none           &kp GRAVE  &kp LA(LSHFT)    &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp RALT     &kp PG_DN   &kp ENTER   &kp KP_N0                           &none          &none          &none          &none          &none
+        &kp F1           &none      &none            &none      &none      &none      &none                                                                             &none  &none  &none       &none     &none     &none &none
+        &kp SOUND_PANEL  &mm_q      &mm_w            &mm_e      &kp F2     &mm_t      &tog HALF                                                                         &none  &none  &none       &kp UP    &none     &none &none
+        &kp ESC          &mm_a      &mm_s            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &none
+        &none            &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                              &none  &none       &none     &none     &none &none
+        &none            &kp GRAVE  &kp LA(LSHFT)    &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp RALT     &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &none
       >;
     };
 
     nav {
       display-name = "NAV";
       bindings = <
-        &none      &none           &none           &none       &none       &none   &tog 1                                                                             &mo 3  &none  &none       &none     &none     &none &none
-        &none      &kp LA(F4)      &kp LC(W)       &none       &none       &none   &tog HALF                                                                          &none  &none  &none       &kp UP    &none     &none &none
-        &none      &kp LGUI        &kp LALT        &kp LSHFT   &kp LCTRL   &none   &none                        &kp LCTRL &kp LALT    &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &none
-        &none      &kp LC(Z)       &kp LC(X)       &kp LC(C)   &kp LC(V)   &none                                          &kp HOME    &kp PG_UP                              &none  &none       &none     &none     &none &none
-        &tog NAV   &none           &none           &none       &none                                    &trans  &kp DEL   &kp END     &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &none
+        &none      &none           &none           &none       &none       &none   &none                                                                              &none  &none            &none         &none       &none         &none &none
+        &kp TAB    &kp LA(F4)      &kp LC(W)       &none       &none       &none   &none                                                                              &none  &none            &none         &kp UP      &none         &none &none
+        &kp ESC    &kp LGUI        &kp LALT        &kp LSHFT   &kp LCTRL   &none   &none                        &kp LCTRL &kp LALT    &kp LGUI  &kp RCTRL             &none  &none            &kp LEFT      &kp DOWN    &kp RIGHT     &none &none
+        &kp LSHFT  &kp LC(Z)       &kp LC(X)       &kp LC(C)   &kp LC(V)   &none                                          &kp HOME    &kp PG_UP                              &kp SOUND_PANEL  &kp C_PREV    &kp C_PP    &kp C_NEXT    &none &none
+        &tog NAV   &none           &none           &none       &none                                    &trans  &kp DEL   &kp END     &kp PG_DN &kp ENTER &none                               &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none &none
       >;
     };
 
     symbol {
       display-name = "SYM";
       bindings = <
-        &none   &none       &none       &none       &none       &none       &tog 1                                                                           &mo 3  &none  &none &none &none &none &none
-        &none   &kp EXCL    &kp AT      &kp LBKT    &kp RBKT    &kp PIPE    &tog HALF                                                                        &none  &none  &none &none &none &none &none
-        &none   &kp HASH    &kp DLLR    &kp LPAR    &kp RPAR    &kp GRAVE   &none                      &kp LCTRL &kp LALT    &kp LGUI  &kp RCTRL             &none  &none  &none &none &none &none &none
-        &none   &kp PRCNT   &kp CARET   &kp LBRC    &kp RBRC    &kp TILDE                                        &kp HOME    &kp PG_UP                              &none  &none &none &none &none &none
-        &none   &none       &none       &none       &none                                    &kp BSPC  &trans    &kp END     &kp PG_DN &kp ENTER &kp BSPC                  &none &none &none &none &none
+        &none   &none       &none       &none       &none       &none       &none                                                                              &none  &none  &none &none &none &none &none
+        &none   &kp EXCL    &kp AT      &kp LBKT    &kp RBKT    &kp PIPE    &none                                                                              &none  &none  &none &none &none &none &none
+        &none   &kp HASH    &kp DLLR    &kp LPAR    &kp RPAR    &kp GRAVE   &none                      &kp LCTRL   &kp LALT    &kp LGUI  &kp RCTRL             &none  &none  &none &none &none &none &none
+        &none   &kp PRCNT   &kp CARET   &kp LBRC    &kp RBRC    &kp TILDE                                          &kp HOME    &kp PG_UP                              &none  &none &none &none &none &none
+        &none   &none       &none       &none       &none                                    &kp BSPC  &kp DEL     &kp END     &kp PG_DN &kp ENTER &trans                    &none &none &none &none &none
       >;
     };
 
+    win {
+      display-name = "WIN";
+      bindings = <
+        &none   &none   &none  &none  &none &none &none                                                &none              &none            &none                 &none                 &none                   &kp ESC    &kp TASK_VIEW
+        &none   &none   &none  &none  &none &none &none                                                &kp NEW_DESKTOP    &kp GOTO_DESK_1  &kp WIN_75            &kp NEXT_MONITOR      &kp WIN_95              &none      &none
+        &none   &none   &none  &none  &none &none &none            &none &none    &none  &none         &kp CLOSE_DESKTOP  &kp GOTO_DESK_2  &kp SNAP_LEFT         &kp CENTER_WINDOW     &kp SNAP_RIGHT          &none      &none
+        &none   &none   &none  &none  &none &none                        &none    &none                                   &kp GOTO_DESK_3  &kp DESK_LEFT         &kp DESK_RIGHT        &kp MAXIMIZE_WINDOW     &none      &none
+        &none   &trans  &none  &none  &none                  &none &none &none    &none &none &none                                        &kp MOVE_DESK_LEFT    &kp MOVE_DESK_RIGHT   &kp MIN_RESTORE_WINDOW  &none      &none
+      >;
+    };
 
     symbol2 {
       display-name = "SYM2";
       bindings = <
-        &none  &none       &none          &none              &none      &none       &tog 1                                                                         &mo 3          &none          &none       &none       &none       &none          &none
-        &none  &kp GRAVE   &kp LESS_THAN  &kp GREATER_THAN   &kp MINUS  &kp PIPE    &tog HALF                                                                      &none          &kp CARET      &kp LBRC    &kp RBRC    &kp DLLR    &kp RIGHT      &none
+        &none  &none       &none          &none              &none      &none       &none                                                                          &mo 3          &none          &none       &none       &none       &none          &none
+        &none  &kp GRAVE   &kp LESS_THAN  &kp GREATER_THAN   &kp MINUS  &kp PIPE    &none                                                                          &none          &kp CARET      &kp LBRC    &kp RBRC    &kp DLLR    &kp RIGHT      &none
         &none  &kp EXCL    &kp ASTRK      &kp FSLH           &kp EQUAL  &kp AMPS    &none                  &kp LCTRL &kp LALT  &kp LGUI    &kp RCTRL               &none          &kp HASH       &kp LPAR    &kp RPAR    &kp SEMI    &kp DQT        &none
         &none  &kp TILDE   &kp PLUS       &kp LBKT           &kp RBKT   &kp PRCNT                                    &kp HOME  &kp PG_UP                                          &kp AT         &kp COLON   &kp COMMA   &kp DOT     &kp SQT        &none
         &none  &none       &none          &none              &none                               &kp BSPC  &trans    &kp END   &kp PG_DN   &kp ENTER   &kp BSPC                                  &none       &none       &none       &none          &none
       >;
     };
-
 
     extra1 {
       display-name = "Red";

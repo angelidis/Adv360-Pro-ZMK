@@ -8,6 +8,7 @@
 
 / {
     behaviors {
+        // NOTE: not used
         mm_q: mm_q {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -63,6 +64,7 @@
             mods = <MOD_RALT>;
         };
 
+        // NOTE: not used
         mm_s: mm_s {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;

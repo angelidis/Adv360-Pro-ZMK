@@ -113,7 +113,7 @@
         &kp TAB    &kp Q           &kp W           &kp E           &kp R           &kp T  &tog HALF                                                                                     &none    &kp Y        &kp U         &kp I           &kp O           &kp P           &kp BSLH
         &kp ESC    &hml LGUI A     &hml LALT S     &hml LSHFT D    &hml LCTRL F    &kp G  &tog MOUSE                &kp LCTRL         &kp LALT     &kp LGUI  &kp RCTRL                  &none    &kp H        &hmr RCTRL J  &hmr RSHFT K    &hmr RALT L     &hmr RGUI SEMI  &kp SQT
         &kp LSHFT  &kp Z           &kp X           &kp C           &kp V           &kp B                                              &kp HOME     &kp PG_UP                                     &kp N        &kp M         &kp COMMA       &kp DOT         &kp FSLH        &kp RSHFT
-        &kp LCTRL  &lt WIN GRAVE   &kp CAPS        &kp LEFT        &kp RIGHT                          &lt NAV SPACE &lt KP DEL        &kp END      &kp PG_DN &lt SYM ENTER &lt FN BSPC                        &kp DOWN      &kp UP          &kp LBKT        &kp RBKT        &kp PRINTSCREEN
+        &kp LCTRL  &lt WIN GRAVE   &lt MOUSE CAPS  &kp LEFT        &kp RIGHT                          &lt NAV SPACE &lt KP DEL        &kp END      &kp PG_DN &lt SYM ENTER &lt FN BSPC                        &kp DOWN      &kp UP          &kp LBKT        &kp RBKT        &kp PRINTSCREEN
       >;
     };
 
@@ -159,11 +159,11 @@
     half {
       display-name = "HALF";
       bindings = <
-        &kp F1           &none      &none            &none      &none      &none      &none                                                                             &none  &none  &none       &none     &none     &none &none
-        &kp SOUND_PANEL  &none      &mm_w            &mm_e      &kp F2     &mm_t      &trans                                                                            &none  &none  &none       &kp UP    &none     &none &none
-        &kp ESC          &mm_a      &none            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &none
-        &none            &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                              &none  &none       &none     &none     &none &none
-        &none            &kp GRAVE  &kp LANG_CHANGE  &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp RALT     &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &none
+        &kp F1           &none      &none            &none      &none      &none      &none                                                                             &none  &none  &none       &none     &none     &none &kp APP_SWITCHER
+        &none            &none      &mm_w            &mm_e      &kp F2     &mm_t      &trans                                                                            &none  &none  &none       &kp UP    &none     &none &kp SOUND_PANEL
+        &kp ESC          &mm_a      &none            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &kp LANG_CHANGE
+        &none            &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                              &none  &none       &none     &none     &none &kp PSCRN
+        &none            &kp GRAVE  &none            &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp RALT     &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &none
       >;
     };
 
@@ -211,7 +211,7 @@
         &none   &none  &none  &none  &none &none &none                                                               &none  &msc SCRL_UP      &msc SCRL_LEFT   &mmv MOVE_UP     &msc SCRL_RIGHT    &none &none
         &none   &none  &none  &none  &none &none &trans           &none &none    &none  &mkp MCLK                    &none  &msc SCRL_DOWN    &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none &none
         &none   &none  &none  &none  &none &none                        &none    &none                                      &none             &mkp MB4         &none            &mkp MB5           &none &none
-        &none   &none  &none  &none  &none              &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                             &none            &none            &none              &none &kp PRINTSCREEN
+        &none   &none  &trans &none  &none              &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                             &none            &none            &none              &none &kp PRINTSCREEN
       >;
     };
 
@@ -222,7 +222,7 @@
         &none   &none  &none  &none  &none &none &none                                                               &none  &msc SCROLL_UP_FAST     &msc SCROLL_LEFT_FAST   &mmv MOVE_UP_SLOW     &msc SCROLL_RIGHT_FAST  &none &none
         &none   &none  &none  &none  &none &none &trans           &none &none    &none  &mkp MCLK                    &none  &msc SCROLL_DOWN_FAST   &mmv MOVE_LEFT_SLOW     &mmv MOVE_DOWN_SLOW   &mmv MOVE_RIGHT_SLOW    &none &none
         &none   &none  &none  &none  &none &none                        &none    &none                                      &none                   &mkp MB4                &none                 &mkp MB5                &none &none
-        &none   &none  &none  &none  &none              &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                                   &none                   &none                 &none                   &none &kp PRINTSCREEN
+        &none   &none  &none  &none  &none              &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                                   &none                   &none                 &none                   &none &trans
       >;
     };
 

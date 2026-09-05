@@ -6,6 +6,9 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #include "macropad.dtsi"
+#include "homerow_mods.dtsi"
+
+
 #include "mouse.h"
 
 #ifndef KEYMAP_DRAWER
@@ -36,7 +39,6 @@
 #define MOUSE 8
 #define MOUSE_SHIFT 9
 
-#include "adv360_key_positions.h"
 
 // mac screenshot
 #define _SCRNS &kp LG(LS(NUMBER_4))
@@ -44,63 +46,8 @@
 / {
     behaviors {
       #include "macros.dtsi"
+      #include "macros2.dtsi"
       #include "version.dtsi"
-
-    hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <175>;
-        // flavor = "tap-preferred";
-        flavor = "balanced";
-        bindings = <&kp>, <&kp>;
-    };
-
-    hml: home_row_mod_left {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS_LEFT";
-        #binding-cells = <2>;
-
-        flavor = "balanced";            // Or "tap-unless-interrupted"
-        tapping-term-ms = <200>;
-        quick-tap-ms = <175>;               // Repeat the key if tapped twice
-        require-prior-idle-ms = <125>;      // Prevents accidental mods during rolls
-
-        bindings = <&kp>, <&kp>;
-
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMBS>;
-        hold-trigger-on-release;        // Wait for the secondary key to release
-    };
-
-    hmr: home_row_mod_right {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS_RIGHT";
-        #binding-cells = <2>;
-
-        flavor = "balanced";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <175>;
-        require-prior-idle-ms = <125>;
-
-        bindings = <&kp>, <&kp>;
-
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMBS>;
-        hold-trigger-on-release;
-    };
-
-    macros {
-        macro_000: macro_000 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            tap-ms = <10>;
-            wait-ms = <10>;
-
-            bindings = <&kp KP_N0>, <&kp KP_N0>, <&kp KP_N0>;
-        };
-    };
-
     };
 
   keymap {
@@ -143,7 +90,6 @@
 
 
 
-    // TODO: think through where you can put some mods here so you can do stuff like alt+f4 alt+f2
     mod {
       display-name = "MOD";
       bindings = <

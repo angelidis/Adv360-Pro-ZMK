@@ -153,11 +153,11 @@
     mouse {
       display-name = "MOUSE";
       bindings = <
-        &none   &none     &none     &none     &none     &none     &none                                                                 &none  &none             &none            &none            &none              &none &none
-        &none   &none     &none     &none     &none     &none     &none                                                                 &none  &msc SCRL_UP      &msc SCRL_LEFT   &mmv MOVE_UP     &msc SCRL_RIGHT    &none &none
-        &none   &kp LGUI  &kp LALT  &kp LSHFT &kp LCTR  &none     &trans             &none &none    &none  &mkp MCLK                    &none  &msc SCRL_DOWN    &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none &none
-        &none   &none     &none     &none     &none     &none                              &none    &none                                      &none             &mkp MB4         &none            &mkp MB5           &none &none
-        &none   &none     &trans    &none     &none                        &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                             &none            &none            &none              &none &kp PRINTSCREEN
+        &none   &none     &none     &none     &none      &none     &none                                                                 &none  &none             &none            &none            &none              &none &none
+        &none   &none     &none     &none     &none      &none     &none                                                                 &none  &msc SCRL_UP      &msc SCRL_LEFT   &mmv MOVE_UP     &msc SCRL_RIGHT    &none &none
+        &none   &kp LGUI  &kp LALT  &kp LSHFT &kp LCTRL  &none     &trans             &none &none    &none  &mkp MCLK                    &none  &msc SCRL_DOWN    &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none &none
+        &none   &none     &none     &none     &none      &none                              &none    &none                                      &none             &mkp MB4         &none            &mkp MB5           &none &none
+        &none   &none     &trans    &none     &none                         &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                             &none            &none            &none              &none &kp PRINTSCREEN
       >;
     };
 

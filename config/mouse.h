@@ -8,19 +8,6 @@
 //defines things such as MOVE_UP, SCRL_UP, LCLK, RCLK, MB4
 #include <dt-bindings/zmk/pointing.h>
 
-
-&mmv {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <450>;
-    delay-ms = <0>;
-};
-
-&msc {
-    acceleration-exponent = <0>;
-    time-to-max-speed-ms = <300>;
-    delay-ms = <0>;
-};
-
 #define MOUSE_MOVE_SLOW    220
 #define MOUSE_SCROLL_FAST  30
 

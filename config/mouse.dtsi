@@ -1,0 +1,20 @@
+// Overrides for the standard ZMK pointing behaviors (&mmv, &msc).
+// These are devicetree node overrides, not preprocessor defines, so
+// this file must be included AFTER <behaviors.dtsi> (which pulls in
+// pointing.dtsi, the file that actually defines the mmv:/msc: nodes).
+//
+// For the ZMK_POINTING_DEFAULT_MOVE_VAL / SCRL_VAL preprocessor
+// defines and the MOVE/SCROLL macros, see mouse.h instead — that one
+// stays included near the top of the keymap, before behaviors.dtsi.
+
+&mmv {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <450>;
+    delay-ms = <0>;
+};
+
+&msc {
+    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <300>;
+    delay-ms = <0>;
+};

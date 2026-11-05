@@ -110,9 +110,9 @@
       bindings = <
         &none            &kp LG(N1)     &kp F2      &kp F3          &kp LA(F4)     &none      &none                                                                             &none  &none  &none       &none     &none     &none &kp APP_SWITCHER
         &kp TAB          &none          &kp LC(W)   &kp UP          &none          &kp LC(T)  &trans                                                                            &none  &none  &none       &kp UP    &none     &none &kp SOUND_PANEL
-        &kp ESC          &kp LC(A)      &kp LEFT    &kp DOWN        &kp RIGHT      &kp LC(L)  &none                    &DEL        &kp BSPC     &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &kp LANG_CHANGE
+        &kp ESC          &kp LC(A)      &kp LEFT    &kp DOWN        &kp RIGHT      &kp LC(L)  &none                    &kp DEL     &kp BSPC     &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &kp LANG_CHANGE
         &kp LSHFT        &kp LC(Z)      &kp LC(X)   &kp LC(C)       &kp LC(V)      &kp LC(N)                                       &kp LSHIFT   &kp HOME                               &none  &none       &none     &none     &none &none
-        &kp LCTRL        &kp GRAVE      &kp LALT    &kp PG_UP       &kp PG_DN                             &kp SPACE    &kp ENTER   &kp END      &kp END   &kp ENTER &none                     &none       &none     &none     &none &kp PSCRN
+        &kp LCTRL        &kp GRAVE      &kp LALT    &kp PG_UP       &kp PG_DN                             &kp SPACE    &kp ENTER   &kp LCTRL    &kp END   &kp ENTER &none                     &none       &none     &none     &none &kp PSCRN
       >;
     };
 

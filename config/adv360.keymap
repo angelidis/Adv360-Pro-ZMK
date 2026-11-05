@@ -40,6 +40,7 @@
 #define WIN  7
 #define MOUSE 8
 #define MOUSE_SHIFT 9
+#define HALF2 10
 
 
 // mac screenshot
@@ -107,11 +108,11 @@
     half {
       display-name = "HALF";
       bindings = <
-        &kp F1           &none      &none            &none      &none      &none      &none                                                                             &none  &none  &none       &none     &none     &none &kp APP_SWITCHER
-        &none            &none      &mm_w            &mm_e      &kp F2     &mm_t      &trans                                                                            &none  &none  &none       &kp UP    &none     &none &kp SOUND_PANEL
-        &kp ESC          &mm_a      &none            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &kp LANG_CHANGE
-        &none            &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                              &none  &none       &none     &none     &none &kp PSCRN
-        &none            &kp GRAVE  &none            &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp RALT     &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &none
+        &none            &kp LG(N1)     &kp F2      &kp F3          &kp LA(F4)     &none      &none                                                                             &none  &none  &none       &none     &none     &none &kp APP_SWITCHER
+        &none            &none          &kp LC(W)   &kp UP          &none          &kp LC(T)  &trans                                                                            &none  &none  &none       &kp UP    &none     &none &kp SOUND_PANEL
+        &kp ESC          &kp LC(A)      &kp LEFT    &kp DOWN        &kp RIGHT      &kp LC(L)  &none                    &none       &none        &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &kp LANG_CHANGE
+        &kp LSHFT        &kp LC(Z)      &kp LC(X)   &kp LC(C)       &kp LC(V)      &kp LC(N)                                       &kp LSHIFT   &kp PG_UP                              &none  &none       &none     &none     &none &none
+        &kp LCTRL        &kp GRAVE      &none       &kp LC(PG_UP)   &kp LC(PG_DN)                             &kp DEL  &kp ENTER   &kp LCTRL    &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &kp PSCRN
       >;
     };
 
@@ -171,6 +172,18 @@
         &none   &trans  &trans  &trans  &trans &none &trans           &none &none    &none  &mkp MCLK                    &none  &msc SCROLL_DOWN_FAST   &mmv MOVE_LEFT_SLOW     &mmv MOVE_DOWN_SLOW   &mmv MOVE_RIGHT_SLOW    &none &none
         &none   &none   &none   &none   &none  &none                        &none    &none                                      &none                   &mkp MB4                &none                 &mkp MB5                &none &none
         &none   &none   &none   &none   &none              &mo MOUSE_SHIFT &none    &none  &none &mkp LCLK &mkp RCLK                                   &none                   &none                 &none                   &none &trans
+      >;
+    };
+
+
+    half2 {
+      display-name = "HALF2";
+      bindings = <
+        &kp F1           &none      &none            &none      &none      &none      &none                                                                             &none  &none  &none       &none     &none     &none &kp APP_SWITCHER
+        &none            &none      &mm_w            &mm_e      &kp F2     &mm_t      &trans                                                                            &none  &none  &none       &kp UP    &none     &none &kp SOUND_PANEL
+        &kp ESC          &mm_a      &none            &mm_d      &mm_f      &kp LC(L)  &none                    &mm_home    &mm_end      &kp LGUI  &kp RCTRL             &none  &none  &kp LEFT    &kp DOWN  &kp RIGHT &none &kp LANG_CHANGE
+        &none            &mm_z      &kp LC(X)        &kp LC(C)  &kp LC(V)  &kp PSCRN                                       &kp LSHIFT   &kp PG_UP                              &none  &none       &none     &none     &none &kp PSCRN
+        &none            &kp GRAVE  &none            &mm_left   &mm_right                             &mm_del  &kp ENTER   &kp RALT     &kp PG_DN &kp ENTER &none                     &none       &none     &none     &none &none
       >;
     };
 
